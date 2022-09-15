@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="container">
-        <form action="<?=$_SERVER['SCRIPT_NAME']?>" method="get" id="form1">
+        <form action = "<?php $_NAME ?>" method = "get">
             <input type="submit" name="true" value="Таблица истинности PHP" class="table_true">
             <input type="submit" name="flexible" value="Таблица гибкого сравнения" class="flexible">
             <input type="submit" name="hard" value="Таблица жесткого сравнения" class="hard">
@@ -62,7 +62,7 @@
                 "-1", flexible(-1, true), flexible(-1, false), flexible(-1, 1), flexible(-1, 0), flexible(-1, -1), flexible(-1, "1"), flexible(-1, null),flexible(-1, "php"),
             ];
             $tables6 = [
-                "&quot1&quot", flexible("1", true), flexible("1", false), flexible("1", 1), flexible("1", 0), flexible("1", -1), flexible("1", "1"), flexible("1", null),flexible("1", "php"),
+                '"1"', flexible("1", true), flexible("1", false), flexible("1", 1), flexible("1", 0), flexible("1", -1), flexible("1", "1"), flexible("1", null),flexible("1", "php"),
             ];
             $tables7 = [
                 "null", flexible(null, true), flexible(null, false), flexible(null, 1), flexible(null, 0), flexible(null, -1), flexible(null, "1"), flexible(null, null),flexible(null, "php"),
@@ -112,111 +112,112 @@
             $tables22 = [
                 1, 1,  printf(!1), 1 || 1, 1 && 1,  printf(1 xor 1),
             ];
-            if (@$_REQUEST['hard']) {
+            if ($_GET['hard']) {
                 echo "<h2>Жёсткое сравнение в PHP</h2>";
                 echo "<table class='table'>";
                 for ($i=0; $i < 9 ; $i++) { 
                     echo "<tr>";
                     for ($j=0; $j < 9; $j++) {
                         if ($i === 0) {
-                            echo "<th scope='row'>{$tables9[$j]}</th>"; 
+                            echo "<th>{$tables9[$j]}</th>"; 
                         }
                         elseif ($i === 1) {
-                            echo "<th scope='row'>{$tables10[$j]}</th>"; 
+                            echo "<th>{$tables10[$j]}</th>"; 
                         }
                         elseif ($i === 2) {
-                            echo "<th scope='row'>{$tables11[$j]}</th>"; 
+                            echo "<th>{$tables11[$j]}</th>"; 
                         }
                         elseif ($i === 3) {
-                            echo "<th scope='row'>{$tables12[$j]}</th>"; 
+                            echo "<th>{$tables12[$j]}</th>"; 
                         }
                         elseif ($i === 4) {
-                            echo "<th scope='row'>{$tables13[$j]}</th>"; 
+                            echo "<th>{$tables13[$j]}</th>"; 
                         }
                         elseif ($i === 5) {
-                            echo "<th scope='row'>{$tables14[$j]}</th>"; 
+                            echo "<th>{$tables14[$j]}</th>"; 
                         }
                         elseif ($i === 6) {
-                            echo "<th scope='row'>{$tables15[$j]}</th>"; 
+                            echo "<th>{$tables15[$j]}</th>"; 
                         }
                         elseif ($i === 7) {
-                            echo "<th scope='row'>{$tables16[$j]}</th>"; 
+                            echo "<th>{$tables16[$j]}</th>"; 
                         }
                         else {
-                            echo "<th scope='row'>{$tables17[$j]}</th>"; 
+                            echo "<th>{$tables17[$j]}</th>"; 
                         }
                     }
                     echo "</tr>";
                 }
                 echo "</table>";
             };
-            if (@$_REQUEST['flexible']) {
+            if ($_GET['flexible']) {
                 echo "<h2>Гибкое сравнение в PHP</h2>";
                 echo "<table class='table'>";
                 for ($i=0; $i < 9 ; $i++) { 
                     echo "<tr>";
                     for ($j=0; $j < 9; $j++) {
                         if ($i === 0) {
-                            echo "<th scope='row'>{$tables0[$j]}</th>"; 
+                            echo "<th>{$tables0[$j]}</th>"; 
                         }
                         elseif ($i === 1) {
-                            echo "<th scope='row'>{$tables1[$j]}</th>"; 
+                            echo "<th>{$tables1[$j]}</th>"; 
                         }
                         elseif ($i === 2) {
-                            echo "<th scope='row'>{$tables2[$j]}</th>"; 
+                            echo "<th>{$tables2[$j]}</th>"; 
                         }
                         elseif ($i === 3) {
-                            echo "<th scope='row'>{$tables3[$j]}</th>"; 
+                            echo "<th>{$tables3[$j]}</th>"; 
                         }
                         elseif ($i === 4) {
-                            echo "<th scope='row'>{$tables4[$j]}</th>"; 
+                            echo "<th>{$tables4[$j]}</th>"; 
                         }
                         elseif ($i === 5) {
-                            echo "<th scope='row'>{$tables5[$j]}</th>"; 
+                            echo "<th>{$tables5[$j]}</th>"; 
                         }
                         elseif ($i === 6) {
-                            echo "<th scope='row'>{$tables6[$j]}</th>"; 
+                            echo "<th>{$tables6[$j]}</th>"; 
                         }
                         elseif ($i === 7) {
-                            echo "<th scope='row'>{$tables7[$j]}</th>"; 
+                            echo "<th>{$tables7[$j]}</th>"; 
                         }
                         else {
-                            echo "<th scope='row'>{$tables8[$j]}</th>"; 
+                            echo "<th>{$tables8[$j]}</th>"; 
                         }
                     }
                     echo "</tr>";
                 }
                 echo "</table>";
             };
-            if (@$_REQUEST["true"]) {
+            if ($_GET["true"]) {
                 echo "<h2>Таблица истинности PHP</h2>";
                 echo "<table class='table'>";
                 for ($i=0; $i < 5 ; $i++) { 
                     echo "<tr>";
                     for ($j=0; $j < 6; $j++) {
                         if ($i === 0) {
-                            echo "<th scope='row'>{$tables18[$j]}</th>"; 
+                            echo "<th>{$tables18[$j]}</th>"; 
                         }
                         elseif ($i === 1) {
-                            echo "<th scope='row'>{$tables19[$j]}</th>"; 
+                            echo "<th>{$tables19[$j]}</th>"; 
                         }
                         elseif ($i === 2) {
-                            echo "<th scope='row'>{$tables20[$j]}</th>"; 
+                            echo "<th>{$tables20[$j]}</th>"; 
                         }
                         elseif ($i === 3) {
-                            echo "<th scope='row'>{$tables21[$j]}</th>"; 
+                            echo "<th>{$tables21[$j]}</th>"; 
                         }
                         else {
-                            echo "<th scope='row'>{$tables22[$j]}</th>"; 
+                            echo "<th>{$tables22[$j]}</th>"; 
                         }
                     }
                     echo "</tr>";
                 }
                 echo "</table>";
             };
-            if (@$_REQUEST["history"]) {
+            if ($_GET["history"]) {
+                echo "<h2>История логотипа</h2>";
                 echo "<p>В далеком 1998 году на заре становления всемирной паутины, большинство сайтов были статичными. Лишь немногие форумы и гостевые книги предлагали какое-то минимальное взаимодействие с пользователем. В это время один из создателей языка PHP, Франсуа Бюффьер, представил свое творение своему другу, французскому дизайнеру Винсенту Понтье. Франсуа Бюффьер попросил разработать логотип для нового языка программирования. Так появился первый логотип PHP с синим овалом и черной обводкой...</p>";
-                $a = "<img src='http://pngimg.com/uploads/php/php_PNG35.png'>";
+                $a = "<img class='img1' src='http://pngimg.com/uploads/php/php_PNG35.png'>";
                 echo $a;
             };
         ?>
