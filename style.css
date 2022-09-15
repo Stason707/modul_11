@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: url('https://images.unsplash.com/photo-1536514498073-50e69d39c6cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80');
+    background-size: 100%;
+}
+#container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.history {
+    background-color: rgb(241, 136, 50);
+    padding: 10px;
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: 0.2s;
+}
+.history:hover {
+    background-color: rgb(200, 112, 40);
+}
+.hard, .flexible, .table_true {
+    background-color: rgba(57, 148, 223, 0.63);
+    padding: 10px;
+    font-family: sans-serif;
+    color: black;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: 0.2s;
+}
+.hard:hover, .flexible:hover, .table_true:hover {
+    background-color: rgba(31, 85, 129, 0.63);
+}
+#tableclass {
+    display: block;
+    padding: 30px;
+    font-family: monospace;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    min-width: 400px;
+    width: auto;
+    font-size: 22px;
+    border: 2px black;
+}
+tr {
+    background-color: rgba(255, 255, 255, 0.944);
+}
+th {
+    padding: 10px;
+    color: rgb(41, 48, 95);
+}
+table {
+    background-color: rgba(113, 113, 113, 0.54);
+}
+#tableclass h2 {
+    padding-left: -120px;    
+    font-family:fantasy;
+    color: rgb(70, 70, 138);
+    display: flex;
+    justify-content: space-around;
+    font-size: 35px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+img {
+    height: 450px;
+    margin-top: -50px;
+    margin-left: 450px;
+    margin-right: 400px;
+}
+p {
+    margin-top: -70px;
+    font-size: 18px;
+    line-height: 1.3;
+    background: rgba(255, 255, 255, 0.268);
+    border-radius: 5px;
+    width: 800px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
